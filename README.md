@@ -1,56 +1,41 @@
-# Welcome to your Expo app 👋
+Taskora - Smart To-Do List Application
+Taskora is a modern, feature-rich task management mobile application built with React Native and Expo Router. It helps users organize daily tasks, manage schedules with due dates, and stay productive through persistent local storage and automated notification alerts.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Features
+File-Based Routing: Built using Expo Router for seamless navigation between screen layouts and bottom tab groups.
 
-## Get started
+Task Management & Scheduling: Add custom tasks with auto-updating creation timestamps and user-defined due dates.
 
-1. Install dependencies
+Persistent Storage: Utilizes React Native AsyncStorage to save tasks locally so data is preserved across app sessions.
 
-   ```bash
-   npm install
-   ```
+Completion Tracking: Easily toggle tasks as completed with a dedicated status checkmark.
 
-2. Start the app
+Local Notifications: Automated push reminders that trigger immediately when a task is saved or when a task becomes overdue.
 
-   ```bash
-   npx expo start
-   ```
+Project File Structure
+Taskora/
+├── app.json
+├── package.json
+└── src/
+└── app/
+├── _layout.tsx               # Root Stack Layout
+└── (tabs)/
+├── _layout.tsx           # Bottom Tab Navigation Configuration
+├── index.tsx             # My Tasks Dashboard (FlatList & Overdue checker)
+└── add.tsx               # Add Task Screen (Auto-dates & Notifications)
 
-In the output, you'll find options to open the app in a
+Installation & Setup Instructions
+Clone the repository or open the project folder in your terminal.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Install all required dependencies by running the following command:
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Bash
+npx expo install expo-notifications @react-native-async-storage/async-storage @expo/vector-icons
+Start the development server with cache cleared:
 
-## Get a fresh project
+Bash
+npx expo start --clear
+Scan the QR code using the Expo Go app on your physical mobile device to run and test the application.
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Demonstration Video
+[https://drive.google.com/drive/folders/1Dd5bfodhYi41V6JAEugbxnlZZRS7-DLR]
